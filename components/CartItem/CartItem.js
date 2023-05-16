@@ -2,10 +2,6 @@ import { Component } from '../../lib/render/Component.js';
 import { getLocalizedCurrency, getLocalizedNumber } from '../../service/i18nStore.js';
 import { decrementProductCounter, getProductTotalPrice, incrementProductCounter, removeFromCart } from '../../service/cartStore.js';
 
-/**
- * @typedef {import('../../service/cartStore.js').CartStateItem} CartItemProps
- * @extends Component<CartItemProps>
- */
 export class CartItem extends Component {
     buildDOM() {
         const cartItem = document.createElement('div');

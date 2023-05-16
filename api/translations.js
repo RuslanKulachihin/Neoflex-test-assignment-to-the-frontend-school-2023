@@ -1,6 +1,6 @@
 export const translations = [
     {
-        locale: 'ru-RU',
+        locale: ['ru-RU', 'ru'],
         translation: {
             favorites: 'Избранное',
             cart: 'Корзина',
@@ -16,7 +16,7 @@ export const translations = [
         },
     },
     {
-        locale: 'en-US',
+        locale: ['en', 'en-US'],
         translation: {
             favorites: 'Favorites',
             cart: 'Cart',
@@ -32,7 +32,7 @@ export const translations = [
         },
     },
     {
-        locale: 'kk-KZ',
+        locale: ['kk-KZ'],
         translation: {
             favorites: 'Таңдаулылар',
             cart: 'Себет',
@@ -50,5 +50,5 @@ export const translations = [
 ];
 
 export const fetchTranslation = (locale) => {
-    return translations.find((entry) => entry.locale === locale);
+    return translations.find((entry) => entry.locale.includes(locale));
 };

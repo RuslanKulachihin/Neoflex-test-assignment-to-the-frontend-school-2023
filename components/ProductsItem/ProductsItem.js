@@ -2,10 +2,6 @@ import { Component } from '../../lib/render/Component.js';
 import { getLocalizedCurrency, getLocalizedNumber, getLocalizedText } from '../../service/i18nStore.js';
 import { addToCart } from '../../service/cartStore.js';
 
-/**
- * @typedef {import('../../api/products.js').Product} ProductsItemProps
- * @extends Component<ProductsItemProps>
- */
 export class ProductsItem extends Component {
     buildDOM() {
         const productsItem = document.createElement('div');

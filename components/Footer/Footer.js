@@ -10,9 +10,9 @@ export class Footer extends Component {
         footer.innerHTML = `
              <p class="footer__logo logo">QPICK</p>
                 <div class="footer__catalog">
-                    <a href="/" class="footer__catalog_container-images style-text-regular">${getLocalizedText('favorites')}</a>
+                    <a href="#" class="footer__catalog_container-images style-text-regular">${getLocalizedText('favorites')}</a>
                     <a href="/cart" class="footer__catalog_container-cart style-text-regular">${getLocalizedText('cart')}</a>
-                    <a href="https://github.com/" class="footer__catalog_container-favorites style-text-regular">${getLocalizedText('contacts')}</a>
+                    <a href="https://github.com/RuslanKulachihin" class="footer__catalog_container-favorites style-text-regular">${getLocalizedText('contacts')}</a>
                 </div>
 
                 <div class="footer__translation">
@@ -21,9 +21,9 @@ export class Footer extends Component {
                         <div class="footer__translation_container">
                             <img src="/assets/images/footer/RU.svg" alt="" class="footer__translation-logo" />
                             <ul class="footer__translation-lang">
-                                <li class="footer__translation-leng style-text-medium ${getLocale() === 'kk-KZ' ? 'active' : ''}" data-locale="kk-KZ">Каз</li>
-                                <li class="footer__translation-leng style-text-medium ${getLocale() === 'ru-RU' ? 'active' : ''}" data-locale="ru-RU">Рус</li>
-                                <li class="footer__translation-leng style-text-medium ${getLocale() === 'en-US' ? 'active' : ''}" data-locale="en-US">Eng</li>
+                                <li class="footer__translation-leng style-text-medium ${getLocale().includes('kk-KZ') ? 'active' : ''}" data-locale="kk-KZ">Каз</li>
+                                <li class="footer__translation-leng style-text-medium ${getLocale().includes('ru-RU') ? 'active' : ''}" data-locale="ru-RU">Рус</li>
+                                <li class="footer__translation-leng style-text-medium ${getLocale().includes('en-US') ? 'active' : ''}" data-locale="en-US">Eng</li>
                             </ul>
                         </div>
                     </div>
@@ -37,10 +37,7 @@ export class Footer extends Component {
         `;
 
         function changeRouteButtonHandler(selector, route) {
-            footer.querySelector(selector).addEventListener('click', (event) => {
-                event.preventDefault();
-                changeRoute.call(route);
-            });
+            footer.querySelector(selector).addEventListener('click', () => changeRoute.call(route));
         }
 
         changeRouteButtonHandler('.footer__catalog_container-cart', '/cart');

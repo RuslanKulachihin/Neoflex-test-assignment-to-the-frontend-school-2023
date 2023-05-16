@@ -1,12 +1,6 @@
 import { Component } from '../../lib/render/Component.js';
 import { CartItem } from '../CartItem/CartItem.js';
 
-/**
- * @typedef {{
- *  items: import('../../service/cartStorage.js').CartStateItem[]
- * }} CartListProps
- * @extends Component<CartListProps>
- */
 export class CartList extends Component {
     buildDOM() {
         const cartList = document.createElement('div');
