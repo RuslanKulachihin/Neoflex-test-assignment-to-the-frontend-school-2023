@@ -1,0 +1,18 @@
+{
+    "name": "neoflex-test-task",
+    "author": "RuslanKulachihin <rworck@yandex.ru> (https://github.com/RuslanKulachihin)",
+    "repository": {
+        "url": "https://github.com/RuslanKulachihin/neoflex-test-task"
+    },
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2"
+    }
+}
